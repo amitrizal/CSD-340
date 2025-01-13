@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Rizal_mod2_2.HTML/1.0.0": {
+        "runtime": {
+          "Rizal_mod2_2.HTML.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Rizal_mod2_2.HTML/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
