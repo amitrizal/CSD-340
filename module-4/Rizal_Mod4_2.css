@@ -1,0 +1,33 @@
+/* Style the image gallery container with CSS Grid */
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    margin: 20px auto;
+    padding: 10px;
+    width: 80%; 
+}
+
+/* Style each gallery item (div inside the grid) */
+#image-gallery div {
+    text-align: center; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Style the images to fit nicely */
+#image-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Style the captions */
+figcaption {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
