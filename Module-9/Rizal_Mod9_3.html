@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amit Rizal">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Rizal_Mod9_3.css">
+</head>
+
+<body>
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+    <h2>Web Development with C# and HTML</h2>
+
+    <hr>
+
+    <h3>Introduction</h3>
+    <p>Welcome to building a Web Page Exercise, Part 2.</p>
+
+    <p>
+        My name is Amit Rizal, and I was born and raised in Nepal. I spent my childhood surrounded by the scenic beauty of mountains and lush greenery.  
+        My hometown is a <span id="word1">________</span> place that I love visiting whenever I get the chance.
+    </p>
+
+    <p>
+        In 2013, I moved to the United States, where I have been building my life and pursuing my dreams.  
+        I have a loving family and enjoy spending quality time with them. My hobbies include hiking, reading, traveling, and learning new technologies.  
+        <span class="hobbies">I am passionate about exploring <span id="word2">________</span> web development.</span>
+    </p>
+
+    <p>
+        Currently, I am studying software Development, which keeps me busy and fulfills my desire to learn more about changing technology every day.  
+        I also enjoy celebrating <span id="word3">________</span> festivals like Tihar and Dashain with my loved ones, keeping my traditions alive.
+    </p>
+
+    <p>
+        Traveling has been one of the most <span id="word4">________</span> ways to refresh my mind.  
+        I love exploring new places, experiencing different cultures, and making unforgettable memories along the way.
+    </p>
+
+    <hr>
+
+    <!-- Buttons to Fill in the Missing Words -->
+    <p>
+        <button type="button" onclick="fillSpan('word1', word1)">Reveal Word 1</button>
+        <button type="button" onclick="fillSpan('word2', word2)">Reveal Word 2</button>
+        <button type="button" onclick="fillSpan('word3', word3)">Reveal Word 3</button>
+        <button type="button" onclick="fillSpan('word4', word4)">Reveal Word 4</button>
+    </p>
+
+    <hr>
+
+    <h3>Retrieval Link</h3>
+    <h4>Address</h4>
+    <p>
+        <a href="https://www.bellevue.edu" target="_blank">Bellevue University</a>
+    </p>
+    <p>1000 Galvin Rd S, Bellevue, NE 68005</p>
+
+    <script>
+        // JavaScript variables to store missing words
+        var word1 = "beautiful";
+        var word2 = "innovative";
+        var word3 = "vibrant";
+        var word4 = "exciting";
+
+        // Function to replace underscores with actual words
+        function fillSpan(spanId, word) {
+            document.getElementById(spanId).innerHTML = word;
+        }
+    </script>
+</body>
+</html>
