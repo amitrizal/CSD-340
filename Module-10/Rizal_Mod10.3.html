@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    .mainImage {
+      width: 300px;
+      height: 200px;
+      border: 2px solid black;
+    }
+    #messageArea {
+      color: blue;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function changeImage(imageFile, message) {
+      const mainImage = document.getElementById('mainImage');
+      mainImage.src = imageFile;
+      document.getElementById('messageArea').innerText = message;
+    }
+
+    function onImageClick(message) {
+      alert(message);
+    }
+  </script>
+</head>
+<body>
+  <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+  <div>
+    <p>Hover over the image to see changes, click for a message.</p>
+    <a href="#" onmouseover="changeImage('cave_01.jpg', 'This is the cave image.')" 
+       onclick="onImageClick('You clicked on the Cave!')">
+      <img id="mainImage" src="cave_01.jpg" alt="Cave" class="mainImage">
+    </a>
+  </div>
+
+  <div>
+    <a href="#" onmouseover="changeImage('moon_02.jpg', 'This is the moon image.')" 
+       onclick="onImageClick('You clicked on the Moon!')">
+      <img src="moon_02.jpg" alt="Moon" class="mainImage">
+    </a>
+  </div>
+
+  <p id="messageArea">Hover over an image to see the details here.</p>
+</body>
+</html>
