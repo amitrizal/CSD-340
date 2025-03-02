@@ -1,12 +1,15 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 h1 {
     text-align: center;
+    background-color: #a33b00;
+    color: white;
+    padding: 20px;
 }
 
 .card {
@@ -19,10 +22,12 @@ h1 {
 }
 
 .card-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #ccc;
+    padding: 15px;
+    background-color: #a33b00;
+    color: white;
+    text-align: center;
 }
 
 .card-content {
@@ -36,15 +41,15 @@ h1 {
 }
 
 #movies th {
-    top-padding: 12px;
-    bottom-padding: 12px;
+    background-color: #a33b00;
+    color: white;
+    padding: 12px;
     text-align: left;
-    background-color: #f2f2f2;
 }
 
 #movies td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px;
 }
 
 footer {
@@ -61,4 +66,3 @@ footer {
 .container {
     margin: 2% 5% 100px 5%;
 }
-
