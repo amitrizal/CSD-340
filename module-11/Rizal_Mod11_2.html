@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        let todoList = [];
+
+        function addItem() {
+            let item = document.getElementById("todoInput").value;
+            if (item.trim() !== "") {
+                todoList.push(item);
+                alert(`Added: "${item}"`);
+                document.getElementById("todoInput").value = "";
+                displayItems();
+            } else {
+                alert("Please enter a valid task.");
+            }
+        }
+
+        function deleteLastItem() {
+            if (todoList.length > 0) {
+                let removedItem = todoList.pop();
+                alert(`Deleted: "${removedItem}"`);
+                displayItems();
+            } else {
+                alert("No tasks to delete.");
+            }
+        }
+
+        function displayItems() {
+            let listContainer = document.getElementById("todoList");
+            listContainer.innerHTML = "";
+            if (todoList.length > 0) {
+                todoList.forEach((item, index) => {
+                    let listItem = document.createElement("p");
+                    listItem.textContent = `Item ${index + 1}: ${item}`;
+                    listContainer.appendChild(listItem);
+                });
+            } else {
+                listContainer.innerHTML = "<p>No tasks in the list.</p>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <p>This interactive To-Do List helps you organize your tasks. Enter a task in the text box and click 'Add' to save it. Click 'Display' to see the current list, and 'Delete Last Entry' to remove the most recent task.</p>
+    <input type="text" id="todoInput" placeholder="Enter a task">
+    <button onclick="addItem()">Add</button>
+    <button onclick="deleteLastItem()">Delete Last Entry</button>
+    <button onclick="displayItems()">Display</button>
+    
+    <h2>Current To-Do List:</h2>
+    <div id="todoList"></div>
+</body>
+</html>
